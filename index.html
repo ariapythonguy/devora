@@ -860,7 +860,7 @@ function updateCartUI() {
                 .join("\n");
 
             let orderTotal = calculateTotal();
-            const upiId =  header.upi_id || '';
+            const upiId =  header.upiId || '';
             const upiLink = `upi://pay?pa=${upiId}&am=${orderTotal}&cu=INR`;
             
             const whatsappMessage = `Order Details:\n ${orderSummary} \n \n Total: ₹${orderTotal} \n \n Pay via UPI: ${upiLink}`;
