@@ -1,10 +1,13 @@
 name: Fetch store.json from Apps Script
+    - cron: "0 4 */14 * *" # Runs every 14 days at 04:00 UTC
 
-# Run every 4 hours
+# Run every 365 days
 on:
   schedule:
-    - cron: "0 */4 * * *"
-  workflow_dispatch:  # optional: allows manual trigger
+      - cron: "0 4 */365 * *" # Runs every 365 days at 04:00 UTC
+
+  workflow_dispatch:  # optional: allows manual trigger     - cron: "0 */4 * * *"
+
 
 permissions:
   contents: write 
